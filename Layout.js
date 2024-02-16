@@ -14,10 +14,9 @@ const Head = styled.section`
 //for Head"Er", get it? lol, lmao.
 const Er = styled.div` 
   height: 100vh; /* Full height */
-  width: 11.2857143%;
+  width: 11%;
   min-width: 200px;
   background-color: #010018;
-  padding-top: 20px; /* Some padding at the top */
 `
 
 //What decorates a Head(er)? Jewelry! What's a short word for Jewelry? Ice! lol, lmao.
@@ -46,9 +45,6 @@ export default function Layout() {
             </li>
             <li>
               <Ice to="/contact">Contact</Ice>
-            </li>
-            <li>
-              <Ice to="/support">Support</Ice>
             </li>
           </ul>
         </nav>

@@ -9,7 +9,6 @@ import Layout from './pages/Layout';
 import Manga from './pages/Manga';
 import Home from './pages/Home';
 import Contact from './pages/Contact'
-import Support from './pages/Support'
 import Publisher from './pages/Publisher'
 
 const router = createBrowserRouter([
@@ -35,10 +34,6 @@ const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact />,
-      },
-      {
-        path: "/support",
-        element: <Support />,
       },
     ],
   },
