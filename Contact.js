@@ -3,19 +3,15 @@ import { Link } from "react-router-dom";
 
 // Create a Wrapper component that'll render a <section> tag with some styles
 const Wrapper = styled.section`
-  display: grid;
-  background: #fbfefe;
-  grid-template-columns: 10% 80% 10%; /* Define the column sizes */
-  width: 100vw;
-  height: 100vh;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-image: url('page_2.png');
+    background-size: cover;
+    background-position: center;
 `
-///////////////////////////////////////////////////////////////////////////////
-
-//Division of the Wrapper
-const DivEven = styled.div`
-    height: 100%;
-`
-/////////////////////////////////////////////////////////////////////////////////
 
 // Create a Title component that'll render an <h1> tag with some styles
 const Title = styled.h1`
@@ -28,11 +24,9 @@ const Title = styled.h1`
 `
 
 const Card = styled.div`
-  display: flex;
-  align-items: center; /* Vertical centering */
-  justify-content: center; /* Horizontal centering, if needed */
-  font-size: 1em;
-  text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 `
 
 // Content within the divs
@@ -44,8 +38,7 @@ const Button = styled.button`
   margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid #31cfe4;
-  border-radius: 30px;
-  
+  border-radius: 30px;  
 `
 
 //What decorates a Head(er)? Jewelry! What's a short word for Jewelry? Ice! lol, lmao.
@@ -60,31 +53,25 @@ display: block;
 export default function Contact() {
     return(
         <>
+
         <Wrapper>
-
-            <DivEven>
-            </DivEven>
-
-            <DivEven>
-                <Title >
-                    You can reach out to me or donate!
-                </Title>
+                
                 <Card style={{color: 'red'}}>
-                    <Button $primary>
-                        <Ice to="/manga" style={{color: 'red'}}>
-                            todoDiscord
-                        </Ice>
-                    </Button>
+
+                    <Ice to="/manga" style={{color: 'red'}}>
+                        <img src="logodiscord.png" style={{width: '50px', background: 'red'}} alt="X"></img>
+                    </Ice>
+
                 </Card>
                 <Card>
-                    <Button $primary>
+                    
                         <Ice to="/manga" style={{color: 'red'}}>
-                            todoTwitter
+                        <img src="logoX.jpg" style={{width: '50px', background: 'red'}} alt="X"></img>
                         </Ice>
-                    </Button>
+                    
                 </Card>
                 <Card>
-                    <Button $primary>
+                <Button $primary>
                         <Ice to="/manga" style={{color: 'red'}}>
                             todoEmail
                         </Ice>
@@ -97,11 +84,7 @@ export default function Contact() {
                         </Ice>
                     </Button>
                 </Card>   
-            </DivEven>
-
-            <DivEven>               
-            </DivEven>
-
+                
         </Wrapper>
         </>        
     );
